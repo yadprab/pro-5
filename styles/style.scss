@@ -139,15 +139,15 @@ input {
 
 #subscribe {
     display: inline-block;
-    padding: 1em 3em;
-    appearance: none;
+    padding: 1em 2em;
+   appearance: none;
     border: none;
     position: absolute;
     right: 10px;
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: 0.6);
-    background: linear-gradient(to bottom, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+    background: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
 }
 
 small {
@@ -172,7 +172,7 @@ small {
     header {
         max-width: 1440px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 600px;
         grid-template-rows: auto 1fr auto;
         background-image: url(../images/bg-pattern-desktop.svg);
         background-position: top 0px right 100px;
@@ -187,13 +187,14 @@ small {
     nav {
         grid-row: 1/2;
         height: 80px;
+        box-shadow: 0 0 0 rgba($color: #000000, $alpha: 0);
 
     }
 
     .hero-text {
 
         grid-row: 2/2;
-        padding: 4em;
+        padding: 0 4em;
         width: 100%;
         max-width: 900px;
         align-self: center;
@@ -203,7 +204,7 @@ small {
 
         h1 {
             text-align: left;
-            font-size: 3rem;
+            font-size: 4rem;
 
         }
 
