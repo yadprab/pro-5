@@ -20,7 +20,6 @@ img {
 
 body {
   line-height: 1.5;
-  height: 100vh;
 }
 
 svg {
@@ -31,6 +30,7 @@ header {
   font-family: var(--font);
   height: 100vh;
   max-width: 480px;
+  padding-bottom: 1em;
   background: linear-gradient(135deg, white, #fff5f5);
 }
 
@@ -196,7 +196,6 @@ small {
 .show {
   display: inline-block;
 }
-
 
 @media screen and (min-width: 1110px) {
   header {
