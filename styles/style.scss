@@ -32,14 +32,13 @@ header {
     font-family: var(--font);
     height: 100vh;
     max-width: 480px;
-    overflow: hidden;
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
 }
 
 nav {
-    padding: 1em;
-    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.4);
+    padding: 2em;
+
 }
 
 .hero-img {
@@ -54,7 +53,8 @@ nav {
 .hero-text {
     margin-top: 1em;
     max-width: 480px;
-    padding: 1em;
+
+
 
 
     h1 {
@@ -62,12 +62,21 @@ nav {
         font-weight: 600;
         text-align: center;
         font-size: 2.5rem;
+
+        width: 100%;
+        letter-spacing: 14px;
         color: var(--DarkGrayishRed);
 
         #title {
             display: block;
             font-weight: 300;
+
             color: var(--DesaturatedRed);
+        }
+
+        #soon {
+            display: block;
+
         }
     }
 }
@@ -75,11 +84,14 @@ nav {
 article {
     max-width: 480px;
     font-size: 1rem;
+    padding: 0.5em;
     text-align: center;
+
     color: var(--DesaturatedRed);
 
     p {
         font-weight: 400;
+        line-height: 1.8;
     }
 }
 
@@ -92,22 +104,19 @@ form {
     align-items: center;
 
 
-    .email {
 
+    .email {
         width: 100%;
         position: relative;
         padding: 0 1em;
-        height: 60px;
-
-      
-
-
+        height: 50px;
 
     }
 }
+
 input {
     width: 100%;
-    max-width: 380px;
+    max-width: 480px;
     height: 50px;
     appearance: none;
     border: 1px solid var(--DesaturatedRed);
@@ -132,22 +141,29 @@ input {
 
 .icon {
     position: absolute;
-    right: 120px;
+    right: 100px;
     top: 15px;
     display: none;
 }
 
 #subscribe {
     display: inline-block;
-    padding: 1em 2em;
-   appearance: none;
+    padding: 0.5em 2em;
+    appearance: none;
     border: none;
     position: absolute;
     right: 10px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px;
+    height: 100%;
     box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: 0.6);
-    background: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+    background: linear-gradient(to right, #f5aeae, hsl(0, 93%, 68%));
+
+
+    &:hover {
+        box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: 1);
+
+    }
 }
 
 small {
@@ -163,9 +179,12 @@ small {
 .error {
     border-color: var(--SoftRed);
 }
-.show{
+
+.show {
     display: inline-block;
 }
+
+
 
 
 @media screen and (min-width:1110px) {
@@ -174,10 +193,13 @@ small {
         display: grid;
         grid-template-columns: 1fr 600px;
         grid-template-rows: auto 1fr auto;
-        background-image: url(../images/bg-pattern-desktop.svg);
-        background-position: top 0px right 100px;
-        background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        // background-position: top 0px right 100px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
 
 
 
@@ -186,25 +208,27 @@ small {
 
     nav {
         grid-row: 1/2;
-        height: 80px;
-        box-shadow: 0 0 0 rgba($color: #000000, $alpha: 0);
+
+
+
+        padding: 2em 4em;
 
     }
 
     .hero-text {
 
         grid-row: 2/2;
-        padding: 0 4em;
-        width: 100%;
-        max-width: 900px;
+        max-width: 700px;
+
         align-self: center;
+        margin-left: 4em;
 
 
 
 
         h1 {
             text-align: left;
-            font-size: 4rem;
+            font-size: 3rem;
 
         }
 
@@ -213,7 +237,7 @@ small {
         }
 
         article {
-            max-width: 400px;
+            max-width: 500px;
             text-align: left;
 
         }
@@ -230,6 +254,11 @@ small {
 
     #subscribe {
         right: 10px;
+        padding: 0.5em 3em;
+    }
+
+    .icon {
+        right: 110px;
     }
 
     form {

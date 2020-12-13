@@ -30,14 +30,11 @@ header {
   font-family: var(--font);
   height: 100vh;
   max-width: 480px;
-  overflow: hidden;
   background: linear-gradient(135deg, white, #fff5f5);
 }
 
 nav {
-  padding: 1em;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 2em;
 }
 
 .hero-img img {
@@ -49,7 +46,6 @@ nav {
 .hero-text {
   margin-top: 1em;
   max-width: 480px;
-  padding: 1em;
 }
 
 .hero-text h1 {
@@ -57,6 +53,8 @@ nav {
   font-weight: 600;
   text-align: center;
   font-size: 2.5rem;
+  width: 100%;
+  letter-spacing: 14px;
   color: var(--DarkGrayishRed);
 }
 
@@ -66,15 +64,21 @@ nav {
   color: var(--DesaturatedRed);
 }
 
+.hero-text h1 #soon {
+  display: block;
+}
+
 article {
   max-width: 480px;
   font-size: 1rem;
+  padding: 0.5em;
   text-align: center;
   color: var(--DesaturatedRed);
 }
 
 article p {
   font-weight: 400;
+  line-height: 1.8;
 }
 
 form {
@@ -95,12 +99,12 @@ form .email {
   width: 100%;
   position: relative;
   padding: 0 1em;
-  height: 60px;
+  height: 50px;
 }
 
 input {
   width: 100%;
-  max-width: 380px;
+  max-width: 480px;
   height: 50px;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -147,14 +151,14 @@ input:focus {
 
 .icon {
   position: absolute;
-  right: 120px;
+  right: 100px;
   top: 15px;
   display: none;
 }
 
 #subscribe {
   display: inline-block;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -162,11 +166,17 @@ input:focus {
   position: absolute;
   right: 10px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 30px;
+  height: 100%;
   -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.6);
           box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.6);
-  background: -webkit-gradient(linear, left top, right top, from(#ce9797), to(#f96262));
-  background: linear-gradient(to right, #ce9797, #f96262);
+  background: -webkit-gradient(linear, left top, right top, from(#f5aeae), to(#f96262));
+  background: linear-gradient(to right, #f5aeae, #f96262);
+}
+
+#subscribe:hover {
+  -webkit-box-shadow: 0 5px 10px -5px black;
+          box-shadow: 0 5px 10px -5px black;
 }
 
 small {
@@ -195,38 +205,36 @@ small {
         grid-template-columns: 1fr 600px;
     -ms-grid-rows: auto 1fr auto;
         grid-template-rows: auto 1fr auto;
-    background-image: url(../images/bg-pattern-desktop.svg);
-    background-position: top 0px right 100px;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
   nav {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    height: 80px;
-    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding: 2em 4em;
   }
   .hero-text {
     -ms-grid-row: 2;
     grid-row: 2/2;
-    padding: 0 4em;
-    width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-left: 4em;
   }
   .hero-text h1 {
     text-align: left;
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .hero-text #soon {
     display: block;
   }
   .hero-text article {
-    max-width: 400px;
+    max-width: 500px;
     text-align: left;
   }
   .hero-img {
@@ -239,6 +247,10 @@ small {
   }
   #subscribe {
     right: 10px;
+    padding: 0.5em 3em;
+  }
+  .icon {
+    right: 110px;
   }
   form {
     margin-top: 0;
